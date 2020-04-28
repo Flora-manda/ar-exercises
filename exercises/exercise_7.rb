@@ -9,4 +9,11 @@ require_relative './exercise_6'
 puts "Exercise 7"
 puts "----------"
 
-# Your code goes here ...
+  @store_name = gets.chomp
+
+  user = Store.new
+  user.name = @store_name
+  user.save!
+  user.valid?
+  user.errors.messages
+
